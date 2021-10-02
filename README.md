@@ -18,9 +18,6 @@
 ##
 ![image](views/images/mobile-three.png)
 
-## Links
-
-[solution](https://landpage-responsive.vercel.app/)
 
 ## Built with
 
