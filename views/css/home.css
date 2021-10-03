@@ -253,11 +253,7 @@ input {
     padding: 15px;
     transform: translateY(10px);
   }
-  /* #btn-mobile{
-            display:flex;
-            transform: translate(30px,10px);
-            gap:.5rem;
-        } */
+ 
 
   ul #features {
     position: relative;
