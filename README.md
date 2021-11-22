@@ -5,18 +5,18 @@
 ## Screenshot
 
 - fireShot desktop
-![image](assets/images/desktop.png)
+![image](src/assets/images/desktop.png)
 ##
-![image](assets/images/desktop-two.png)
+![image](src/assets/images/desktop-two.png)
 ##
 
 - fireshot mobile
 ##
-![image](assets/images/mobile-one.png)
+![image](src/assets/images/mobile-one.png)
 ##
-![image](assets/images/mobile-two.png)
+![image](src/assets/images/mobile-two.png)
 ##
-![image](assets/images/mobile-three.png)
+![image](src/assets/images/mobile-three.png)
 
 
 ## Built with
