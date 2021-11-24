@@ -1,11 +1,14 @@
-import Header from "./components/header";
-import Section from "./components/section";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 const App = () => {
   return (
-    <div className="App">
-      <Header />
-      <Section />
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/"  component={Home} />
+        <Route exact path="/login" component={Login} />
+      </Switch>
+    </Router>
   );
 };
 

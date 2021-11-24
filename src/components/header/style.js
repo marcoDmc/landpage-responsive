@@ -136,6 +136,7 @@ export const Li = styled.li`
   list-style: none;
   color: #0d1126;
   font-weight: 600;
+  cursor:pointer;
 `;
 export const Div = styled.div`
   margin-left: 10px;

@@ -3,16 +3,22 @@ import logo from "../../assets/images/logo.svg";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Header = () => {
   const [IoMenus, setIoMenus] = useState(true);
   const [IoCloses, setIoCloses] = useState(false);
-  const [popup, setPopup] = useState(false);
+  
 
   const handleMenuHamburguer = () => {
     setIoMenus(!IoMenus);
     setIoCloses(!IoCloses);
   };
+
+  const history = useHistory();
+  function teste() {
+    history.push("/login");
+  }
   return (
     <C.Header>
       <C.Div className="logo">
@@ -31,7 +37,9 @@ const Header = () => {
           <C.Li>PRODUCT</C.Li>
           <C.Li>FEATURES</C.Li>
           <C.Li>PRICING</C.Li>
-          <C.Li className="login">LOGIN</C.Li>
+          <C.Li className="login" onClick={teste}>
+            LOGIN
+          </C.Li>
         </C.Ul>
       </C.Nav>
     </C.Header>

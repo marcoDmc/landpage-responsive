@@ -11,7 +11,7 @@ export const Global = createGlobalStyle`
 }
 body{
     width: 100%;
-    background: grey;
+    background:#ffff;
     overflow-x: hidden;
     font-family: 'Barlow Condensed', sans-serif;
 }
