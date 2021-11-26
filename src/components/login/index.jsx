@@ -1,83 +1,48 @@
 import * as C from "./style";
-import Teste from "../../assets/images/login.svg";
+import { IoCloseSharp } from "react-icons/io5";
 import { useHistory } from "react-router-dom";
-import {
-  IoLogoFacebook,
-  IoLogoGoogle,
-  IoMailOutline,
-  IoChevronForward,
-  IoCloseSharp,
-} from "react-icons/io5";
+import Background from "../../assets/images/create-account-back.svg";
 
-const LoGin = () => {
+const Login = () => {
   const history = useHistory();
-  function teste() {
-    history.push("/");
-  }
+  const handleDirectionLogin = () => history.push("/create_account/account");
   return (
-    <C.Div className="formulario">
+    <C.Div className="body">
+      <C.Img src={Background} />
       <C.Section>
-        <C.Div className="svg">
-          <C.Img src={Teste} />
+        <C.Div>
+          <C.Span>
+            <C.H2>Sign up</C.H2>
+            <IoCloseSharp
+              onClick={handleDirectionLogin}
+              className="IoCloseSharp"
+            />
+          </C.Span>
+          <C.Span>Sign up with Google</C.Span>
         </C.Div>
-        <C.Div className="container">
-          <C.Form>
-            <C.Div className="title">
-              <C.Span>
-                <IoCloseSharp
-                  onClick={teste}
-                  style={{
-                    color: "#0D1126",
-                    width: "20px",
-                    height: "20px",
-                    cursor: "pointer",
-                  }}
-                />
-              </C.Span>
-              <C.H1>Create Account.</C.H1>
-              <C.Span>Share your thoughts with the world from today</C.Span>
+        <C.Form>
+          <C.Fieldset>
+            <C.Div className="email">
+              <C.Label>Email</C.Label>
+              <C.Input type="email" />
             </C.Div>
-            <C.Div className="socials">
-              <C.Span>Continue With</C.Span>
-              <C.Div className="social_authentication">
-                <C.Div>
-                  <IoLogoFacebook
-                    style={{ color: "#0D1126", width: "20px", height: "20px" }}
-                  />
-                  <C.Span>Facebook</C.Span>
-                </C.Div>
-                <C.Div>
-                  <IoLogoGoogle
-                    style={{ color: "#0D1126", width: "20px", height: "20px" }}
-                  />
-                  <C.Span>Google</C.Span>
-                </C.Div>
-                <C.Div>
-                  <IoMailOutline
-                    style={{ color: "#0D1126", width: "20px", height: "20px" }}
-                  />
-                  <C.Span>Email address</C.Span>
-                </C.Div>
+            <C.Div className="password">
+              <C.Label>Password</C.Label>
+              <C.Input type="password" />
+            </C.Div>
+            <C.Div className="check">
+              <C.Div className="checkbox">
+                <C.Label>
+                  <C.Input type="checkbox" /> I agree with Terms and Privacy
+                </C.Label>
               </C.Div>
+              <C.Button type="submit">Sign up</C.Button>
             </C.Div>
-            <C.Div className="account">
-              <C.Span>Already have an account?</C.Span>
-              <C.Span>
-                Log in
-                <IoChevronForward className="IoChevronForward" />
-              </C.Span>
-            </C.Div>
-            <C.Footer>
-              <C.Span>
-                By register you agree with our terms and conditions and privacy
-                policy
-              </C.Span>
-            </C.Footer>
-          </C.Form>
-        </C.Div>
+          </C.Fieldset>
+        </C.Form>
       </C.Section>
     </C.Div>
   );
 };
 
-export default LoGin;
+export default Login;

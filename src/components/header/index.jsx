@@ -8,7 +8,6 @@ import { useHistory } from "react-router-dom";
 const Header = () => {
   const [IoMenus, setIoMenus] = useState(true);
   const [IoCloses, setIoCloses] = useState(false);
-  
 
   const handleMenuHamburguer = () => {
     setIoMenus(!IoMenus);
@@ -16,9 +15,8 @@ const Header = () => {
   };
 
   const history = useHistory();
-  function teste() {
-    history.push("/login");
-  }
+  const handleRenderingLogin = () => history.push("/create_account");
+
   return (
     <C.Header>
       <C.Div className="logo">
@@ -37,7 +35,7 @@ const Header = () => {
           <C.Li>PRODUCT</C.Li>
           <C.Li>FEATURES</C.Li>
           <C.Li>PRICING</C.Li>
-          <C.Li className="login" onClick={teste}>
+          <C.Li className="login" onClick={handleRenderingLogin}>
             LOGIN
           </C.Li>
         </C.Ul>

@@ -13,7 +13,7 @@ body{
     width: 100%;
     background:#ffff;
     overflow-x: hidden;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
 }
 .App{
     width: 100%;
@@ -24,6 +24,13 @@ body{
     
 
 }
+.body{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
 
 
 `;

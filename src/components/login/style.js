@@ -1,136 +1,141 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  width: 50vw;
-  height: 60vh;
-  border-radius: 10px;
+  width: 450px;
+  height: 70vh;
+  padding: 10px;
   display: flex;
-  flex-direction: inline;
-  justify-content: end;
-  margin: auto;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
   gap: 5px;
-  color: #0d1126;
-  background: #ece3e1;
-  box-shadow: 2px 2px 15px 2px #2a2a2a;
+  align-items: center;
+  border-radius: 10px;
+  margin: 0 auto;
+  background: #ffff;
 
-  @media (max-width: 700px) {
-    flex-direction: column;
+  @media (max-width: 600px) {
+    width: 375px;
     height: 80vh;
-    width: 50vh;
+  }
+
+  .footer {
+  }
+
+  div:first-child {
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+    width: 100%;
+
+    .IoCloseSharp {
+      width: 20px;
+      height: 20px;
+      background: #f25c5c;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    span:first-child {
+      display: flex;
+      flex-direction: inline;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    span:last-child {
+      display: flex;
+      color: #f25c5c;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  form {
+    width: 100%;
+  }
+  .check {
+    display: flex;
+    flex-direction: column;
+    button {
+      padding: 4px;
+    }
+  }
+  .password {
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+
+    input {
+      padding: 4px;
+    }
+  }
+  .name {
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      padding: 4px;
+    }
+  }
+  .email {
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+
+    input {
+      padding: 4px;
+    }
+  }
+
+  .checkbox {
+    padding: 4px;
+    display: flex;
+    flex-direction: inline;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
   }
 `;
+export const Span = styled.span``;
 export const Img = styled.img`
   object-fit: cover;
   width: 100%;
   height: 100%;
-  clip-path: circle(50% at 50% 50%);
+`;
+export const H2 = styled.h2`
+  color: #0d1126;
+`;
+export const Div = styled.div``;
+export const Label = styled.label`
+  color: #0d1126;
+`;
+export const Input = styled.input`
+  outline: none;
+  border: none;
+  background: #F2F2F2;
+  padding: 4px;
+  :focus {
+    border: 1px solid #f25c5c;
+    transition: 0.5s ease;
+  }
+`;
+export const Button = styled.button`
+  cursor: pointer;
+  background: #f25c5c;
+  border: 2px solid #bf4b4b;
+  border-radius: 5px;
+  color: #f2f2f2;
+
+  :hover {
+    background: #bf4b4b;
+    transition: 0.4s ease;
+  }
 `;
 export const Form = styled.form``;
-export const H1 = styled.h1``;
-export const Footer = styled.footer`
-  white-space: nowrap;
-  font-size: 0.6rem;
-  padding: 4px;
-  width: 100%;
-  text-align: center;
+export const Fieldset = styled.fieldset`
+  padding: 3px;
+  border: none;
+  border-top: 1px solid grey;
 `;
-export const Div = styled.div`
-  &.svg {
-    width: 100%;
-    border-radius: 0px 0px 0px 10px;
-  }
-  &.formulario {
-    width: 100%;
-    min-height: 100vh;
-    background: grey;
-    display: flex;
-    align-items: center;
-  }
-  &.container {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    height: 100%;
-    width: 100%;
-    gap: 4px;
-    padding: 10px;
-
-    .title {
-      span:last-child {
-        display: flex;
-        color: #945995;
-        width: 100%;
-        padding: 4px;
-      }
-      span:first-child {
-        display: flex;
-        justify-content: end;
-        width: 100%;
-      }
-    }
-    .account {
-      height: 50%;
-      display: flex;
-      flex-direction: column;
-
-      span {
-        align-items: center;
-        display: flex;
-      }
-      span:last-child {
-        color: #945995;
-        align-items: center;
-        display: flex;
-        cursor: pointer;
-
-        .IoChevronForward {
-          transform: translateY(2px);
-        }
-      }
-    }
-    .socials {
-      height: 50%;
-      padding: 5px;
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-      .social_authentication {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        height: 100%;
-        gap: 3px;
-        width: 100%;
-        color: #E34933;
-
-        div {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          border-radius: 3px;
-          justify-content: space-around;
-          font-size: 1rem;
-          white-space: nowrap;
-          cursor: pointer;
-          border: 1px solid #bdaac2;
-
-          :hover {
-            border: 1px solid #6a316a;
-            transition: 0.6s ease;
-          }
-        }
-      }
-    }
-
-    form {
-      height: 100%;
-      width: 100%;
-      gap: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-    }
-  }
-`;
-export const Span = styled.span``;

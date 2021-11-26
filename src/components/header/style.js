@@ -137,6 +137,11 @@ export const Li = styled.li`
   color: #0d1126;
   font-weight: 600;
   cursor:pointer;
+
+  :hover{
+    text-decoration: underline;
+    transition:0.3s ease;
+  }
 `;
 export const Div = styled.div`
   margin-left: 10px;
